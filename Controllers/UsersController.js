@@ -16,11 +16,18 @@ class UsersController {
         if (!UserToBeRegistered.nome) {
             return res.status(400).json({message: 'REQUISIÇÃO INVÁLIDA. NOME DO USUÁRIO É VAZIO'})
         }
-
-        /*if (this.validaSeOUsuarioExiste(UserToBeRegistered)) {
+     
+        /*(const PossibleUser = Users.findAll(
+            {
+                where: {
+                    login: UserToBeRegistered.login,
+                }
+            }
+            );
+        if (UserToBeRegistered.login = PossibleUser.login) {
             return res.status(400).json({message: 'ESSE USUÁRIO JÁ EXISTE'})
-        } */
-
+        }*/
+        
         return res.status(200).json(await Users.create(UserToBeRegistered))
     }
 
@@ -47,18 +54,7 @@ class UsersController {
         return res.status(200).json({})
     }
 
-    validaSeOUsuarioExiste = async (user) => {
-        const PossibleUser = await Users.findAll(
-            {
-                where: {
-                    login: user.login,
-                    password: user.password
-                }
-            }
-        );
-
-        return PossibleUser && PossibleUser.length > 0;
-    }
+    
 
     telaInicial = (req, res) => { 
         res.set('Content-Type', 'text/html')
@@ -67,6 +63,14 @@ class UsersController {
     telaExames = (req, res) => { 
         res.set('Content-Type', 'text/html')
         res.sendFile('C:/Users/LITTLE botton/Desktop/Techers/projetoaula/FrontEnd/Exames.html')
+    }
+    telaCadastrarExames = (req, res) => { 
+        res.set('Content-Type', 'text/html')
+        res.sendFile('C:/Users/LITTLE botton/Desktop/Techers/projetoaula/FrontEnd/CadastroExames.html')
+    }
+    telaLogin = (req, res) => { 
+        res.set('Content-Type', 'text/html')
+        res.sendFile('C:/Users/LITTLE botton/Desktop/Techers/projetoaula/FrontEnd/Login.html')
     }
 }
 

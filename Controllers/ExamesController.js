@@ -39,6 +39,11 @@ class ExamesController {
 
         return resposta.status(200).json(await ExameModel.update(Exame));
     }
+    deletar = async (requisicao, resposta) => {
+        const Exame = requisicao.body;
+
+        return resposta.status(200).json(await Exames.truncate(Exame));
+    }
 }
 
 module.exports = new ExamesController;

@@ -13,9 +13,9 @@
 </head>
 <body>
     <div id="conteudoPagina" class="conteudoPagina">
-        <div id="cartaoDeLogin" class="cartaoDeLogin center-absolute">
+        <div id="cartaoDeLogin" class="cartaoDeLogin center-absolute" style="height: 800px;">
             <div class="cabecalhoCartaoDeLogin centralizadoTotalmente">
-                <span>Log in</span>
+                <span>Cadastro</span>
             </div>
             <div class="centralizadoTotalmente jogar-pra-cima" style="padding: 10px;  flex-direction: column !important;">
                 
@@ -25,15 +25,24 @@
 
 
                 <div class= "centralizadoTotalmente divinfo" style="flex-direction: column !important;">
-                    <label><span>Acesso</span></label>
-                    <input class="campoFormulario" id="email" name="email" type="text" placeholder= "Acesso" required>
+                    <label><span>Nome de Usuario</span></label>
+                    <input class="campoFormulario" id="nome" name="Nome" type="text" placeholder= "Nome" required>
                 </div>
-                <div class= "centralizadoTotalmente divinfo" style="flex-direction: column !important; margin-bottom: 2rem;">
+
+                <div class= "centralizadoTotalmente divinfo" style="flex-direction: column !important;">
+                    <label><span>Email</span></label>
+                    <input class="campoFormulario"  id="email" name="email" type="text" placeholder= "Email" required>
+                </div>
+
+                <div class= "centralizadoTotalmente divinfo" style="flex-direction: column !important;">
                     <label><span>Senha</span></label>
-                    <input placeholder="Senha" class="campoFormulario" id="senha" name="senha" type="password" required>
+                    <input placeholder="Senha" class="campoFormulario"  id="senha" name="senha" type="text" required>
+                </div>
+                <div class="campoFormulario centralizadoTotalmente" style= "margin-bottom: 40px">
+                    <button id="botaoCadastro" class="botao-login"><span>Criar</span></button>
                 </div>
                 <div class="campoFormulario centralizadoTotalmente">
-                    <button id="botaoLogin" class="botao-login"><span>Acessar</span></button>
+                    <button id="botaoPGLogin" class="botao-login"><span>Ja tenho cadastro</span></button>
                 </div>
             </div>
                 
@@ -42,7 +51,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script type="module" src="iniciar.js"> </script>
-    <script type="module" src="Login.js"> </script>
-    <script type ="module" src="menuInicial.js"></script>
+    <script type="module" src="Cadastro.js"> </script>
 </body>
 </html>

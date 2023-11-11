@@ -5,13 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/elemento.css">
+    <link rel="stylesheet" href="./elemento.css">
     <title>Document</title>
 </head>
 <body style="background-color:rgb(141, 187, 255);">
   
   <p class = "display-1 text-center" > Exames do Paciente </p>
   <div class="text-center">
-    <button type="button" class="btn btn-primary btn-lg"><span>Adicionar Exames</span></button>
+    <body>
+      <div>
+              <button type="button" class="btn btn-primary btn-lg" id="btnRedirect"><span>Adicionar Exames</span></button>
+          </div>
+      </div>
+
+      <div class="list" style="padding-left: 20px;">
+          <table id="tabela-pagina" class="container">
+              <tbody>
+                   
+              </tbody>
+          </table>
+
+      
+      </div>
+      
+      
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+       <script type="module" src="/AddExames.js"></script>
+  </body>
   </div>
 </body>
 </html>

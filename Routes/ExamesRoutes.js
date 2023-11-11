@@ -10,6 +10,7 @@ class ExamesRoutes {
         servidor.get(SERVER_BASE_URL + ENTITY_NAME + 'consultar-by-id/:id', ExamesController.consultarPeloId)
         servidor.post(SERVER_BASE_URL + ENTITY_NAME + 'cadastrar', ExamesController.cadastrar)
         servidor.put(SERVER_BASE_URL + ENTITY_NAME + 'atualizar', ExamesController.atualizar)
+        servidor.delete(SERVER_BASE_URL + ENTITY_NAME + 'deletar', ExamesController.deletar)
     }
 
 }
